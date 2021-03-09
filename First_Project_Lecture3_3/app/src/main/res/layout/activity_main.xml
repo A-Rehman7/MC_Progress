@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="#AA6C2A"
         android:text="LICENSE"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +27,7 @@
         android:layout_width="370dp"
         android:layout_height="70dp"
         android:layout_marginTop="118dp"
-        android:background="#884BD5ED"
+        android:background="#AA6C2A"
         android:text="Do You Agree about these terms and conditions?"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +40,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
+        android:background="#AA6C2A"
         android:text="AGREE"
         android:textSize="24sp"
         app:buttonTint="@color/black"
@@ -48,8 +51,12 @@
         android:id="@+id/radioButton3"
         android:layout_width="150dp"
         android:layout_height="100dp"
+        android:background="#AA6C2A"
         android:text="DISAGREE"
+        android:textColorLink="@color/black"
+        android:textCursorDrawable="@android:drawable/alert_dark_frame"
         android:textSize="24sp"
+        app:buttonTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/radioButton2"
         tools:layout_editor_absoluteY="360dp" />
