@@ -2,6 +2,7 @@ package com.example.first_project_lecture3_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -23,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.imageView);
-        imageView.setImageResource(R.drawable.c);
+        imageView.setImageResource(R.drawable.a);
 
         imageView = findViewById(R.id.imageView);
-        mp = MediaPlayer.create(this, R.raw.sound);
+        mp = MediaPlayer.create(this, R.raw.sound1);
 
         imageView.setImageResource(images[0]);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -35,9 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 if (startIndex < endIndex) {
                     imageView.setImageResource(images[startIndex]);
                     startIndex++;
+                    if(startIndex==endIndex){
+                        mp.stop();
+                        finishAffinity();
+
+                    }
                 }
                 mp.start();
             }
+
         });
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
